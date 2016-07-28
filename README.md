@@ -22,24 +22,26 @@ Note: Logs only appear in Fabric console on crash and restart.
 
 
 On OSX in main.mm (rename)
-`
-#include "ofMain.h"
+```C++
+#include ""ofMain.h"
 #define USE_CRASHLYTICS
-#include "ofxFabricSoftener.h"
-`
+#include ofxFabricSoftener.h
+```
+
 Include near the top in main.mm <-note mm
 
-`
+```C++
 int main( ){
     ofxFabricSoftener::setup();
 ...
-}`
+}
+```
 
 
  
  
 On iOS in your AppRootDelegate.mm
-`
+```Obj-C
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     ofxFabricSoftener::setup();
@@ -47,26 +49,26 @@ On iOS in your AppRootDelegate.mm
     [super applicationDidFinishLaunching:application];
 
 }
-`
+```
 
 
 C++ style
-`
+```
 Crashlytics.sharedInstance().recordError(error)
-`
+```
 
 Obj-C style
-`
+```
 [CrashlyticsKit recordError:error];
-`
+```
 
 
 The idea is to create a consistent log and easily be able to 
 switch the flag. Not done.
-`
+```
 
 #define NSLog(...) CLS_LOG(__VA_ARGS__)
-`
+```
 
 So, we don't ever use CLS_LOG explicitly. We only use NSLog, but all the NSLogs make it to the Crashlytics dashboard.
 
@@ -81,5 +83,5 @@ So, we don't ever use CLS_LOG explicitly. We only use NSLog, but all the NSLogs 
 
 
 Todo: Look at https://github.com/gameoverhack/ofxLogger/blob/master/src/ofxLogger.h
-*/
+
 
