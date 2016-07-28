@@ -23,9 +23,9 @@ Note: Logs only appear in Fabric console on crash and restart.
 
 On OSX in main.mm (rename)
 ```C++
-#include ""ofMain.h"
+#include "ofMain.h"
 #define USE_CRASHLYTICS
-#include ofxFabricSoftener.h
+#include "ofxFabricSoftener.h""
 ```
 
 Include near the top in main.mm <-note mm
