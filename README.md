@@ -10,7 +10,7 @@ This is super quick WIP with purpose to make life easier using remote logging an
 
 1. Install and follow [instructions](https://fabric.io/home)
 2. Set your bunde identifieir
-3. Add your app from Fabric app and follwo instructions
+3. Add your app from Fabric app and follow instructions
 4. Make sure to select DWARF with dSYM File for Debug in Build Settings
 5. Make pretty. Add icons from Icon Composer in Apple Graphics tools and put in data folder.
 6. Edit Project.xconfig to add icon They will appear in the Fabric console.
@@ -28,7 +28,7 @@ On OSX in main.mm (rename)
 #include "ofxFabricSoftener.h""
 ```
 
-Include near the top in main.mm <-note mm
+Include near the top in main.mm
 
 ```C++
 int main( ){
